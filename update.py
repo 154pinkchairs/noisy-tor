@@ -20,7 +20,7 @@ def scrape_uas(urls):
     headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
             }
-    responses = [requests.get(url, headers=headers) for url in urls]
+    responses = [requests.get(url, headers=headers, timeout=10) for url in urls]
     soups = [bs(response.text, "lxml") for response in responses]
     ua_spans = [[soup.find_all("span", {"class": "code"}) for soup in soups]]
     uas = [[ua.text.split(",") for ua in ua_spans[i] if getattr(ua, "text") is not None] for i in range(len(ua_spans))]
