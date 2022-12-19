@@ -67,9 +67,11 @@ if __name__ == "__main__":
 
     # URLs to scrape user agents from
     urls = [
-            "https://developers.whatismybrowser.com/useragents/explore/software_name/chrome/",  # Chrome user agents
-            "https://developers.whatismybrowser.com/useragents/explore/software_name/firefox/",  # Firefox user agents
-            "https://developers.whatismybrowser.com/useragents/explore/software_name/safari/"  # Safari user agents
+            "https://developers.whatismybrowser.com/useragents/explore/software_name/chrome/",
+            "https://developers.whatismybrowser.com/useragents/explore/software_name/firefox/",
+            "https://developers.whatismybrowser.com/useragents/explore/software_name/safari/",
+            "https://developers.whatismybrowser.com/useragents/explore/software_name/edge/",
+            "https://developers.whatismybrowser.com/useragents/explore/software_name/opera/"
             ]
 
     # Config file to update with the latest user agents
